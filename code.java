@@ -1,4 +1,8 @@
 package First;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Scanner;
+
 class Employee {
     int em_age;
     String em_name, em_designation, em_department;
@@ -24,20 +28,30 @@ class Employee {
             this.developer_id = developer_id;
             this.pr_language = pr_language;
         }
-      void  update_skills(String s){
-           s=".net";
-          
+      void  update_skills(String s)//Requesting new or additional skills to update
+	  {
+          // s=".net";
+		  System.out.println("Enter the language or skill:");
+		  ArrayList<String> myList = new ArrayList<String>(Arrays.asList(myArray));
+		  System.out.println("Enter the element that is to be added:");
+		  Scanner s = new Scanner(System.in);
+		  myList.add(s);
+		  this.pr_language = myList.toArray(myArray);
         }
 
-        double rais_salary(double val)
+        double rais_salary(double val)//changed the salary update to depend on val
         {
-            val=em_salary+=24789.12;
-            return val;
+			this.em_salary=this.em_salary+val;
+            //val=val+24789.12;
+            return this.em_salary;
             
             //System.out.println();
         }
-        void change_designation(String s){
-            
+        void change_designation(String s)//Asking new designation and updating
+		{
+			System.out.println("Enter the new designation:");
+			Scanner s = new Scanner(System.in);
+            this.designation=s;
             
         }
         double display_salary(){

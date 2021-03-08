@@ -31,12 +31,14 @@ class Employee {
 
         double rais_salary(double val)
         {
-            val=em_salary+=24789.12;
-            return val;
+            em_salary+=val;
+          
             
             //System.out.println();
         }
         void change_designation(String s){
+            em_designation = s;
+            
             
             
         }
@@ -47,8 +49,8 @@ class Employee {
 public class Lakshmisonikar {
     public static void main(String[] args) {
         Developer d1=new Developer(1,"laxmi","Tester","banking",23343.00,435, new String[]{"java", "html", "python"});
-        d1.em_designation="Java 14";
-        //double val = 0;
+        d1.change_designation("Java 14");
+        double val = 25980;
         d1.rais_salary(val);
         
     }

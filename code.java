@@ -12,7 +12,7 @@ class Employee {
         this.em_salary = em_salary;
     }
 
-   
+ //copy constructor missing  
 }
     
      class Developer extends Employee{
@@ -26,10 +26,10 @@ class Employee {
         }
       void  update_skills(String s){
            s=".net";
-          
+          // s should be appended to pr_language
         }
 
-        double rais_salary(double val)
+        double rais_salary(double val) // double raise_salary(double val)
         {
             val=em_salary+=24789.12;
             return val;
@@ -37,12 +37,13 @@ class Employee {
             //System.out.println();
         }
         void change_designation(String s){
-            
+            //unimplemented method
             
         }
         double display_salary(){
             return em_salary;
         }
+         //copy constructor missing
     }
 public class Lakshmisonikar {
     public static void main(String[] args) {

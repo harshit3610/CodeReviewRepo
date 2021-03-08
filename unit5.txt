@@ -1,0 +1,27 @@
+public void Testname()// Testclass for testing getname
+{
+student obj = new student("Shalini");
+string name= obj.getname();
+Assert.IsNotNull(name);
+}
+
+public void Testid()// Testclass for testing getid
+{
+student obj = new student(230);
+int id = obj.getid();
+Assert.IsTrue(id!=0);
+}
+
+public void Testpercentage()// Testclass for testing getpercentage
+{
+student obj = new student(45.0);
+double per = obj.getpercentage();
+Assert.IsTrue(per>40.0);
+}
+
+public void TestSkills()// Testclass for testing getskills
+{
+student obj = new student("c","c++","java");
+String skills[] = obj.getskills();
+Assert.IsNotNull(skills);
+}

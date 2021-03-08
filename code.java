@@ -28,16 +28,27 @@ class Employee {
            s=".net";
           
         }
-
-        double rais_salary(double val)
+    
+         Developer(Developer d) //added copy constructor
+         {this.em_age = d.em_age;
+        this.em_name = d.em_name;
+        this.em_designation = d.em_designation;
+        this.em_department = d.em_department;
+        this.em_salary = d.em_salary;
+         this.developer_id = d.developer_id;
+            this.pr_language = d.pr_language;
+         }
+         
+        double rais_salary(double val) //corrected method
         {
-            val=em_salary+=24789.12;
-            return val;
+            em_salary=em_salary+val;
+           
             
-            //System.out.println();
+           // System.out.println();
         }
-        void change_designation(String s){
-            
+        void change_designation(String s) //corrected method
+        {
+            em_designation=s;
             
         }
         double display_salary(){
@@ -49,7 +60,11 @@ public class Lakshmisonikar {
         Developer d1=new Developer(1,"laxmi","Tester","banking",23343.00,435, new String[]{"java", "html", "python"});
         d1.em_designation="Java 14";
         //double val = 0;
-        d1.rais_salary(val);
+        d1.rais_salary(24789.12);
+        System.out.println(""+ d1.em_salary);
+        Developer backup= new Developer(d1); //created backup
+        backup.developer_id=2; //update backup
+        
         
     }
 }

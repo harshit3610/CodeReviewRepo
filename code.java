@@ -1,5 +1,8 @@
 package First;
 class Employee {
+    
+    //@author(nlama700) these data members should be specified as protected
+    
     int em_age;
     String em_name, em_designation, em_department;
     double em_salary;
@@ -12,6 +15,7 @@ class Employee {
         this.em_salary = em_salary;
     }
 
+    //@author(nlama700) add copy constructor
    
 }
     
@@ -26,23 +30,28 @@ class Employee {
         }
       void  update_skills(String s){
            s=".net";
-          
+           //@author(nlama700) this method should append 's' to 'pr_language'
         }
 
-        double rais_salary(double val)
+        double rais_salary(double val) //@author(nlama700) typo in name
         {
             val=em_salary+=24789.12;
             return val;
+            
+            //@author(nlama700) this method should increase 'em_salary' by 'val'
+            //@author(nlama700) there should not return a value
             
             //System.out.println();
         }
         void change_designation(String s){
             
-            
+            //@author(nlama700) method incomplete
         }
         double display_salary(){
             return em_salary;
         }
+         
+         //@author(nlama700) copy constructor missing
     }
 public class Lakshmisonikar {
     public static void main(String[] args) {
@@ -51,5 +60,6 @@ public class Lakshmisonikar {
         //double val = 0;
         d1.rais_salary(val);
         
+        //@author(nlama700) missing operations
     }
 }

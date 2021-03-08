@@ -24,7 +24,7 @@ class Employee {
             this.developer_id = developer_id;
             this.pr_language = pr_language;
         }
-      void  update_skills(String s){
+      void  update_skills(String s){               // appropriate operation not performed
            s=".net";
           
         }
@@ -36,7 +36,7 @@ class Employee {
             
             //System.out.println();
         }
-        void change_designation(String s){
+        void change_designation(String s){                 // funtion body missing
             
             
         }
@@ -47,9 +47,9 @@ class Employee {
 public class Lakshmisonikar {
     public static void main(String[] args) {
         Developer d1=new Developer(1,"laxmi","Tester","banking",23343.00,435, new String[]{"java", "html", "python"});
-        d1.em_designation="Java 14";
+        d1.em_designation="Java 14";       
         //double val = 0;
         d1.rais_salary(val);
-        
+                              // all operations not performed , eg no backup object.
     }
 }

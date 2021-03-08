@@ -26,21 +26,23 @@ class Employee {
         }
       void  update_skills(String s){
            s=".net";
-          
+           
         }
-
-        double rais_salary(double val)
+        //function to raise salary
+        public double rais_salary(double val)
         {
-            val=em_salary+=24789.12;
+            em_salary+=val;
             return val;
             
             //System.out.println();
         }
+         //function to change designation
         void change_designation(String s){
             
-            
+            em_designation=s;
         }
-        double display_salary(){
+         //function to display salary
+        public double display_salary(){
             return em_salary;
         }
     }
@@ -48,8 +50,8 @@ public class Lakshmisonikar {
     public static void main(String[] args) {
         Developer d1=new Developer(1,"laxmi","Tester","banking",23343.00,435, new String[]{"java", "html", "python"});
         d1.em_designation="Java 14";
-        //double val = 0;
+        double val = 24789.12 ;
         d1.rais_salary(val);
-        
+        System.out.println("the new salary:",d1.display_salary);
     }
 }
